@@ -1,0 +1,22 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+<div class="jumbotron">
+        <h1>Find all hearthstone cards!<h1/>
+</div>
+
+<form method="post" action="/getCards">
+    Please type your country's 2-letter code(uppercase):
+    <input type="text" name="country"><br>
+    available countries: DE-Germany; US-United States; ES-Spain; MX-Mexico; FR-France; IT-Italy; JP-Japan;
+    KR-South Korea; PL-Poland; BR-Brazil; RU-Russia; TH-Thailand; CN-China<br><br>
+
+    Please type your language(2-letter code, lowercase):
+    <input type="text" name="language"><br>
+    available languages: de-German; en-English; es-Spanish; fr-French; it-Italian; ja-Japanese; ko-Korean;
+    pl-polish; pt-Portuguese; ru-Russian; th-Thai; zh-Chinese(Simplified)<br><br>
+    <input type="submit" value = "Find cards!">
+</form>
+
+
+<%- include('bootfooter') -%>

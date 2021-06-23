@@ -1,0 +1,26 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+<div class="jumbotron">
+    <h1>Here are the cards:</h1>
+    <p> see <a href=<%= url %>> this url</a> for the data</p>
+</div>
+
+<% result.map((card) => {%>
+<div style="border-top:thick solid blue; margin:20; padding:10">
+    <h3> <%= card.name %> </h3>
+    <b>Cost</b>: <%= card.cost %><br>
+    <b>Info</b>: <%- card.text %><br>
+    <b>Rarity</b>: <%= card.rarity %><br>
+    <b>Type</b>: <%= card.type %><br>
+    <% if (card.type == "MINION") {%>
+        <b>Attack</b>: <%= card.attack %><br>
+        <b>Health</b>: <%= card.health %><br>
+    <%} %>
+    <br>
+</div>
+<%})%>
+
+<%= JSON.stringify(result) %>
+
+<%- include('bootfooter') -%>

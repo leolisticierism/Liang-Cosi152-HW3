@@ -1,0 +1,23 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+<div class="jumbotron">
+      <h1>Thank you for submitting your feedback!</h1>
+</div>
+
+<h2>Here is your form data:</h2><br>
+Your name is <%= fullname %><br><br>
+Your email address is <%= emailaddress %><br><br>
+Your age is <%= age %><br><br>
+You are <%= occupation %><br><br>
+Your bio: <%= bio %><br><br>
+
+<% if (hearthstone== "yes") {%>
+    You play hearthstone
+<%} else if (hearthstone=="no") {%>
+    You do not play hearthstone.
+<%}%> <br><br>
+
+Your feedback: <%= feedback %>
+
+<%- include('bootfooter') -%>

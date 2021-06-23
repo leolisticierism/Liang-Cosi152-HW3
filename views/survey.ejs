@@ -1,0 +1,53 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+<div class="jumbotron">
+    <h1>Hearthstone Survey</h1>
+    <p>Please fill out this survey! Thanks!</p>
+</div>
+
+<form method="post" action="/formdata">
+  Enter your name:
+  <input type="text"
+         name="fullname"
+         placeholder="your full name"><br>
+  Your email address:
+  <input type="text"
+         name="emailaddress"
+         placeholder="your email address"><br>
+  Year of birth:
+  <input type="number"
+         name="birthday"><br>
+  Favorite color:
+  <input type="color"
+         name="favoriteColor"> <br>
+
+  Select your job status
+  <select name="occupation">
+    <option>middle school student</option>
+    <option>high school student</option>
+    <option>college student</option>
+    <option>MS/PhD student</option>
+    <option>employed</option>
+    <option>unemployed</option>
+  </select>
+
+  <br>
+  Tell us about yourself:
+  <br>
+  <textarea name="bio" rows="10" cols="40"></textarea>
+  <br>
+  Do you play hearthstone?<br>
+  yes <input type="radio" name="hearthstone" value="yes"><br>
+  no  <input type="radio" name="hearthstone" value="no"><br>
+  don't want to say
+      <input type="radio" name="hearthstone" value="maybe"><br>
+
+  <br>
+
+  Please provide your feedback(what can be improved? what other information would you like to see?):
+  <br>
+  <textarea name="feedback" rows="10" cols="40"></textarea>
+  <br>
+
+  <input type="submit" value="Provide Feedback!">
+</form>

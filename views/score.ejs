@@ -1,0 +1,28 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+<div class="jumbotron">
+        <h1>Calculate your score!</h1>
+        <p> Write down your last 5 hearthstone battleground results!</p>
+</div>
+
+    <form method="post" action="/calcScore">
+        Game 1<br>
+        Hero Tier List: <input type="number" name="a"> <br>
+        Ranking: <input type="number" name = "aa"> <br>
+        Game 2<br>
+        Hero Tier List: <input type="number" name="b"> <br>
+        Ranking: <input type="number" name = "bb"> <br>
+        Game 3<br>
+        Hero Tier List: <input type="number" name="c"> <br>
+        Ranking: <input type="number" name = "cc"> <br>
+        Game 4<br>
+        Hero Tier List: <input type="number" name="d"> <br>
+        Ranking: <input type="number" name = "dd"> <br>
+        Game 5<br>
+        Hero Tier List: <input type="number" name="e"> <br>
+        Ranking: <input type="number" name = "ee"> <br>
+        <input type="submit" value="Calculate Your Score!">
+    </form>
+
+<%- include('bootfooter') -%>

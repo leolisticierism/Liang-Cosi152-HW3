@@ -1,0 +1,28 @@
+<%- include('bootheader') -%>
+<%- include('menubar') -%>
+
+<div class="jumbotron">
+    <h1> Rankings for <%= rank.heroname %> </h1>
+    <p> Here are the rankings for all <%= rank.heroname %> games you have played </p>
+
+    <ul>
+      <%  for(let i=rankings.length-1; i>=0; i--){
+          ranking = rankings[i]
+      %>
+        <li>
+          <%= ranking.rank %>
+          <%= ranking.createdAt %>
+        </li>
+      <%}%>
+    </ul>
+
+      <form method="post" action="/rank/addRanking/<%= rank._id %>">
+          new game ranking: <input type="text" name="ranking"> Example: 7th <br>
+          <input type="submit" value="add your new ranking!">
+      </form>
+    <br>
+    <a href = "/rank"> back to your game results </a>
+
+  </div>
+
+  <%- include('bootfooter') -%>
